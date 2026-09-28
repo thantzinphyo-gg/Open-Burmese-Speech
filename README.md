@@ -41,10 +41,6 @@ Acoustic speech recognition models fine-tuned for Myanmar language:
 | **Wav2Vec2-XLS-R-300M-ASR** | Facebook XLS-R 300M | [Hugging Face](https://huggingface.co/thantzinphyo/Wav2Vec2-XLS-R-300M-ASR) |
 | **Whisper-Base-ASR** | OpenAI Whisper Base (74M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Base-ASR) |
 | **Whisper-Tiny-ASR** | OpenAI Whisper Tiny (39M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-ASR) |
-| **Whisper-Small-Myanmar-Partial-Freezing** | OpenAI Whisper Small (244M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-Myanmar-Partial-Freezing) |
-| **Whisper-Tiny-Myanmar-Full-Fine-Tune** | OpenAI Whisper Tiny (39M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-Full-Fine-Tune) |
-| **Whisper-Tiny-Myanmar-UnFreezing** | Whisper Tiny | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-UnFreezing) |
-| **Whisper-Tiny-Myanmar-Partial-Freezing** | OpenAI Whisper Tiny (39M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-Partial-Freezing) |
 
 ---
 
