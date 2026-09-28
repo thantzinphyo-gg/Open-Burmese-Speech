@@ -1,5 +1,5 @@
 # Open-Burmese-Speech
-**Open Corpora, Benchmarks, and Acoustic Models for the Myanmar Language**
+**Open Corpora and Acoustic Models for the Myanmar Language**
 
 *Author: [Thant Zin Phyo](https://huggingface.co/thantzinphyo)*
 
@@ -7,7 +7,6 @@
 [![Hugging Face Profile](https://img.shields.io/badge/Hugging_Face-thantzinphyo-blue.svg)](https://huggingface.co/thantzinphyo)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg)](https://www.python.org/)
-[![Myanmar Unicode Standard](https://img.shields.io/badge/Unicode-Myanmar_Standard-orange.svg)](#word-segmentation--text-normalization)
 
 ---
 
@@ -15,7 +14,7 @@
 
 **Open-Burmese-Speech** is an open-source speech processing ecosystem designed to advance Automatic Speech Recognition (ASR), Speech Synthesis (TTS), and audio language processing for Myanmar (Burmese).
 
-Large-scale audio and parquet shards are hosted on the **Hugging Face Hub** with streaming capabilities, while this repository maintains documentation, standard specifications, and evaluation benchmarks.
+Audio datasets are permanently hosted on the **Hugging Face Hub** with streaming capabilities, while this repository maintains documentation, usage examples, and model references.
 
 **Open-Burmese-Speech** သည် မြန်မာဘာသာစကားအတွက် အလိုအလျောက် စကားပြောအသံ အသိအမှတ်ပြုစနစ် (ASR) နှင့် အသံဆိုင်ရာ နည်းပညာ သုတေသနများအတွက် ရည်ရွယ်တည်ဆောက်ထားသော Open-Source Corpus နှင့် Model Hub ဖြစ်ပါသည်။
 
@@ -27,26 +26,25 @@ Large-scale audio and parquet shards are hosted on the **Hugging Face Hub** with
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Burmese Daily Dialogue Corpus (BDDC)** | Conversational / Daily Dialogue | **~22.38 Hours** (24,560 WAVs) | 13 Synthetic Speakers | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus) |
 | **Burmese Speech Refined OpenSLR-80** | Crowdsourced General Speech | **~2.47 Hours** (Refined Subset) | Single-speaker | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/burmese-speech-refined-openslr-80) |
-| **Myanmar ShopVoice** | Retail & E-Commerce Conversational | Domain Specific | Multi-speaker | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/myanmar-shopvoice) |
 
 ---
 
-## Model Zoo & Evaluation Benchmarks
+## Model Zoo
 
-All models below were fine-tuned using standardized Myanmar Unicode text preprocessing on the **Burmese Daily Dialogue Corpus (BDDC)**. Evaluations were performed on the Validation split and the **Held-Out Test Set (Unseen Zero-Shot Speakers: ဂီတ & နန္ဒ)**.
+Acoustic speech recognition models fine-tuned for Myanmar language:
 
-| Model Name | Architecture / Base | Val CER (%) | Val WER (%) | Val chrF | Test CER (%) *(Unseen)* | Test WER (%) *(Unseen)* | Test chrF *(Unseen)* | Model Link |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Dolphin-Base-Burmese-ASR** | E-Branchformer + Transformer | **3.00** | 22.88 | **95.54** | **4.42** | **23.51** | **92.54** | [Hugging Face](https://huggingface.co/thantzinphyo/Dolphin-Base-Burmese-ASR) |
-| **Meta-MMS-300M-ASR** | Facebook MMS-300M (Wav2Vec2) | **2.85** | **20.66** | 95.39 | 6.66 | 32.64 | 87.22 | [Hugging Face](https://huggingface.co/thantzinphyo/Meta-MMS-300M-ASR) |
-| **Whisper-Small-ASR** | OpenAI Whisper Small (244M) | 3.21 | 20.70 | 94.86 | 5.74 | 28.22 | 89.93 | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-ASR) |
-| **Wav2Vec2-XLS-R-300M-ASR** | Facebook XLS-R 300M | 3.53 | 24.25 | 94.97 | 6.58 | 33.24 | 87.69 | [Hugging Face](https://huggingface.co/thantzinphyo/Wav2Vec2-XLS-R-300M-ASR) |
-| **Whisper-Base-ASR** | OpenAI Whisper Base (74M) | 4.43 | 26.55 | 91.94 | 8.55 | 36.29 | 83.71 | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Base-ASR) |
-| **Whisper-Tiny-ASR** | OpenAI Whisper Tiny (39M) | 4.47 | 25.21 | 92.91 | 11.69 | 42.29 | 79.82 | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-ASR) |
-
-*Preceding models fine-tuned on OpenSLR-80:*
-- [Whisper-Small-Myanmar-Partial-Freezing](https://huggingface.co/thantzinphyo/Whisper-Small-Myanmar-Partial-Freezing)
-- [Whisper-Tiny-Myanmar-Full-Fine-Tune](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-Full-Fine-Tune)
+| Model Name | Architecture / Base Model | Hugging Face Hub Link |
+| :--- | :--- | :---: |
+| **Dolphin-Base-Burmese-ASR** | E-Branchformer + Transformer (`DataoceanAI/dolphin-base`) | [Hugging Face](https://huggingface.co/thantzinphyo/Dolphin-Base-Burmese-ASR) |
+| **Meta-MMS-300M-ASR** | Facebook MMS-300M (Wav2Vec2) | [Hugging Face](https://huggingface.co/thantzinphyo/Meta-MMS-300M-ASR) |
+| **Whisper-Small-ASR** | OpenAI Whisper Small (244M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-ASR) |
+| **Wav2Vec2-XLS-R-300M-ASR** | Facebook XLS-R 300M | [Hugging Face](https://huggingface.co/thantzinphyo/Wav2Vec2-XLS-R-300M-ASR) |
+| **Whisper-Base-ASR** | OpenAI Whisper Base (74M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Base-ASR) |
+| **Whisper-Tiny-ASR** | OpenAI Whisper Tiny (39M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-ASR) |
+| **Whisper-Small-Myanmar-Partial-Freezing** | OpenAI Whisper Small (244M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-Myanmar-Partial-Freezing) |
+| **Whisper-Tiny-Myanmar-Full-Fine-Tune** | OpenAI Whisper Tiny (39M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-Full-Fine-Tune) |
+| **Whisper-Tiny-Myanmar-UnFreezing** | Whisper Tiny | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-UnFreezing) |
+| **Whisper-Tiny-Myanmar-Partial-Freezing** | OpenAI Whisper Tiny (39M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-Partial-Freezing) |
 
 ---
 
@@ -100,17 +98,6 @@ print("Transcribed Text:", result["text"])
 
 ---
 
-## Word Segmentation & Text Normalization
-
-Word segmentation ambiguity is a significant challenge in Myanmar language processing. All corpora and models in this project adhere to unified text normalization rules:
-1. **Unicode Compliance:** Strict enforcement of standard Myanmar Unicode (`U+1000` to `U+109F`), rejecting pseudo-Zawgyi encodings.
-2. **Word Segmentation:** Lexical and grammatical units are consistently whitespace-delimited to support optimal subword tokenization (BPE).
-3. **Punctuation Filtering:** Non-standard punctuation symbols are normalized to eliminate acoustic-textual mismatches.
-
-For detailed guidelines and technical notes, refer to [WORD_SEGMENTATION_RULES.md](WORD_SEGMENTATION_RULES.md).
-
----
-
 ## Myanmar Language Summary
 
 ### ဒေတာအတွဲဆိုင်ရာ အချက်အလက်များ
@@ -128,7 +115,7 @@ If you use these corpora or models in your research or applications, please cite
 ```bibtex
 @misc{open_burmese_speech_2026,
   author       = {Thant Zin Phyo},
-  title        = {Open-Burmese-Speech: Open Corpora, Benchmarks and Acoustic Models for Myanmar Language},
+  title        = {Open-Burmese-Speech: Open Corpora and Acoustic Models for Myanmar Language},
   year         = {2026},
   publisher    = {GitHub},
   journal      = {GitHub repository},

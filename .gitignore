@@ -27,12 +27,14 @@ __pycache__/
 venv/
 env/
 
-# Training and internal scripts (Keep private to local workspace)
+# Training, internal scripts, and private docs
 *_finetune.py
 whisper_*.py
 upload_*.py
 inspect_audio.py
 README_*.md
+*word*segmentation*.md
+WORD_SEGMENTATION_RULES.md
 
 # OS specific files
 .DS_Store
