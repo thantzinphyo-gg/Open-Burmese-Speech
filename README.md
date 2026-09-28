@@ -1,55 +1,56 @@
-# Open-Burmese-Speech 🇲🇲🎙️
-### Comprehensive Open-Source Burmese Speech Corpora, Benchmarks & Fine-Tuned ASR Models
-**Curated & Maintained by [Thant Zin Phyo](https://huggingface.co/thantzinphyo)**
+# Open-Burmese-Speech
+**Open Corpora, Benchmarks, and Acoustic Models for the Myanmar Language**
 
-[![Hugging Face Datasets](https://img.shields.io/badge/🤗%20Hugging%20Face-BDDC%20Dataset-yellow.svg)](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus)
-[![Hugging Face Profile](https://img.shields.io/badge/🤗%20Hugging%20Face-thantzinphyo-blue.svg)](https://huggingface.co/thantzinphyo)
+*Author: [Thant Zin Phyo](https://huggingface.co/thantzinphyo)*
+
+[![Hugging Face Datasets](https://img.shields.io/badge/Hugging_Face-BDDC_Dataset-yellow.svg)](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus)
+[![Hugging Face Profile](https://img.shields.io/badge/Hugging_Face-thantzinphyo-blue.svg)](https://huggingface.co/thantzinphyo)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg)](https://www.python.org/)
-[![Myanmar Unicode Standard](https://img.shields.io/badge/Unicode-Myanmar%20Standard-orange.svg)](#word-segmentation--text-normalization)
+[![Myanmar Unicode Standard](https://img.shields.io/badge/Unicode-Myanmar_Standard-orange.svg)](#word-segmentation--text-normalization)
 
 ---
 
-## 📌 Overview / စီမံကိန်း မိတ်ဆက်
+## Overview
 
-**Open-Burmese-Speech** is a unified open-source ecosystem designed to advance speech recognition (ASR), speech synthesis (TTS), and audio language processing for the Myanmar (Burmese) language.
+**Open-Burmese-Speech** is an open-source speech processing ecosystem designed to advance Automatic Speech Recognition (ASR), Speech Synthesis (TTS), and audio language processing for Myanmar (Burmese).
 
-All raw audio files and large parquet shards are permanently hosted on **Hugging Face Hub** with free, high-speed streaming support, while this repository serves as the official open-source documentation, developer specification, and evaluation benchmark hub.
+Large-scale audio and parquet shards are hosted on the **Hugging Face Hub** with streaming capabilities, while this repository maintains documentation, standard specifications, and evaluation benchmarks.
 
-**Open-Burmese-Speech** သည် မြန်မာဘာသာစကားအတွက် Automatic Speech Recognition (ASR)၊ စကားပြောအသံ အသိအမှတ်ပြုစနစ်နှင့် သဘာဝဘာသာစကား သုတေသနများအတွက် ရည်ရွယ်ဖန်တီးထားသော Open-Source Corpus နှင့် Model Hub ဖြစ်ပါသည်။ 
+**Open-Burmese-Speech** သည် မြန်မာဘာသာစကားအတွက် အလိုအလျောက် စကားပြောအသံ အသိအမှတ်ပြုစနစ် (ASR) နှင့် အသံဆိုင်ရာ နည်းပညာ သုတေသနများအတွက် ရည်ရွယ်တည်ဆောက်ထားသော Open-Source Corpus နှင့် Model Hub ဖြစ်ပါသည်။
 
 ---
 
-## 📊 Dataset Collection / မြန်မာစကားပြော ဒေတာအတွဲများ
+## Dataset Collection
 
-| Dataset Name | Domain / Type | Duration | Speakers | Audio Format | Hugging Face Hub Link |
+| Dataset Name | Domain / Type | Duration | Speakers | Audio Format | Hugging Face Hub |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Burmese Daily Dialogue Corpus (BDDC)** | Conversational / Daily Dialogue | **~22.38 Hours** (24,560 WAVs) | 13 Synthetic Speakers | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus) |
-| **Burmese Speech Refined OpenSLR-80** | Crowdsourced General Speech | **~2.47 Hours** (Refined Subset) | Single-speaker | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/burmese-speech-refined-openslr-80) |
-| **Myanmar ShopVoice** | Retail & E-Commerce Conversational | Domain Specific | Multi-speaker | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/myanmar-shopvoice) |
+| **Burmese Daily Dialogue Corpus (BDDC)** | Conversational / Daily Dialogue | **~22.38 Hours** (24,560 WAVs) | 13 Synthetic Speakers | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus) |
+| **Burmese Speech Refined OpenSLR-80** | Crowdsourced General Speech | **~2.47 Hours** (Refined Subset) | Single-speaker | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/burmese-speech-refined-openslr-80) |
+| **Myanmar ShopVoice** | Retail & E-Commerce Conversational | Domain Specific | Multi-speaker | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/myanmar-shopvoice) |
 
 ---
 
-## 🏆 Model Zoo & ASR Benchmark Leaderboard
+## Model Zoo & Evaluation Benchmarks
 
-All models below were fine-tuned using standardized Myanmar Unicode text preprocessing on the **Burmese Daily Dialogue Corpus (BDDC)**. Evaluation was conducted across both the Validation split and the **Held-Out Test Set (Unseen Zero-Shot Speakers: ဂီတ & နန္ဒ)**.
+All models below were fine-tuned using standardized Myanmar Unicode text preprocessing on the **Burmese Daily Dialogue Corpus (BDDC)**. Evaluations were performed on the Validation split and the **Held-Out Test Set (Unseen Zero-Shot Speakers: ဂီတ & နန္ဒ)**.
 
 | Model Name | Architecture / Base | Val CER (%) | Val WER (%) | Val chrF | Test CER (%) *(Unseen)* | Test WER (%) *(Unseen)* | Test chrF *(Unseen)* | Model Link |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Dolphin-Base-Burmese-ASR** | E-Branchformer + Transformer | **3.00** | 22.88 | **95.54** | **4.42** | **23.51** | **92.54** | [🤗 Hugging Face](https://huggingface.co/thantzinphyo/Dolphin-Base-Burmese-ASR) |
-| **Meta-MMS-300M-ASR** | Facebook MMS-300M (Wav2Vec2) | **2.85** | **20.66** | 95.39 | 6.66 | 32.64 | 87.22 | [🤗 Hugging Face](https://huggingface.co/thantzinphyo/Meta-MMS-300M-ASR) |
-| **Whisper-Small-ASR** | OpenAI Whisper Small (244M) | 3.21 | 20.70 | 94.86 | 5.74 | 28.22 | 89.93 | [🤗 Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-ASR) |
-| **Wav2Vec2-XLS-R-300M-ASR** | Facebook XLS-R 300M | 3.53 | 24.25 | 94.97 | 6.58 | 33.24 | 87.69 | [🤗 Hugging Face](https://huggingface.co/thantzinphyo/Wav2Vec2-XLS-R-300M-ASR) |
-| **Whisper-Base-ASR** | OpenAI Whisper Base (74M) | 4.43 | 26.55 | 91.94 | 8.55 | 36.29 | 83.71 | [🤗 Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Base-ASR) |
-| **Whisper-Tiny-ASR** | OpenAI Whisper Tiny (39M) | 4.47 | 25.21 | 92.91 | 11.69 | 42.29 | 79.82 | [🤗 Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-ASR) |
+| **Dolphin-Base-Burmese-ASR** | E-Branchformer + Transformer | **3.00** | 22.88 | **95.54** | **4.42** | **23.51** | **92.54** | [Hugging Face](https://huggingface.co/thantzinphyo/Dolphin-Base-Burmese-ASR) |
+| **Meta-MMS-300M-ASR** | Facebook MMS-300M (Wav2Vec2) | **2.85** | **20.66** | 95.39 | 6.66 | 32.64 | 87.22 | [Hugging Face](https://huggingface.co/thantzinphyo/Meta-MMS-300M-ASR) |
+| **Whisper-Small-ASR** | OpenAI Whisper Small (244M) | 3.21 | 20.70 | 94.86 | 5.74 | 28.22 | 89.93 | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-ASR) |
+| **Wav2Vec2-XLS-R-300M-ASR** | Facebook XLS-R 300M | 3.53 | 24.25 | 94.97 | 6.58 | 33.24 | 87.69 | [Hugging Face](https://huggingface.co/thantzinphyo/Wav2Vec2-XLS-R-300M-ASR) |
+| **Whisper-Base-ASR** | OpenAI Whisper Base (74M) | 4.43 | 26.55 | 91.94 | 8.55 | 36.29 | 83.71 | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Base-ASR) |
+| **Whisper-Tiny-ASR** | OpenAI Whisper Tiny (39M) | 4.47 | 25.21 | 92.91 | 11.69 | 42.29 | 79.82 | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Tiny-ASR) |
 
-*Older generation models fine-tuned on OpenSLR-80:*
-- [Whisper-Small-Myanmar-Partial-Freezing](https://huggingface.co/thantzinphyo/Whisper-Small-Myanmar-Partial-Freezing) *(1,300+ downloads)*
+*Preceding models fine-tuned on OpenSLR-80:*
+- [Whisper-Small-Myanmar-Partial-Freezing](https://huggingface.co/thantzinphyo/Whisper-Small-Myanmar-Partial-Freezing)
 - [Whisper-Tiny-Myanmar-Full-Fine-Tune](https://huggingface.co/thantzinphyo/Whisper-Tiny-Myanmar-Full-Fine-Tune)
 
 ---
 
-## 🚀 Quickstart & Usage
+## Quickstart & Usage
 
 ### 1. Installation
 
@@ -61,7 +62,7 @@ pip install -r requirements.txt
 
 ### 2. Stream Audio & Transcripts from Hugging Face
 
-You do not need to download the full 2.45 GB dataset to begin experimenting. Stream it directly:
+You can stream samples directly from the Hugging Face Hub without downloading the entire dataset:
 
 ```python
 from datasets import load_dataset
@@ -79,9 +80,9 @@ for sample in dataset.take(3):
     print("Audio Sampling Rate:", sample["audio"]["sampling_rate"])
 ```
 
-### 3. Speech Recognition (Transcribing Burmese Audio)
+### 3. Speech Recognition Inference
 
-Transcribe any Burmese audio file in 2 lines with Transformers:
+Run Burmese ASR inference via Hugging Face Transformers pipeline:
 
 ```python
 import torch
@@ -99,30 +100,30 @@ print("Transcribed Text:", result["text"])
 
 ---
 
-## 📐 Word Segmentation & Text Normalization
+## Word Segmentation & Text Normalization
 
-A critical bottleneck in Burmese Speech Recognition is word boundary ambiguity. All datasets in this repository follow unified word segmentation and standardization rules:
-1. **Unicode Strictness:** Standard Myanmar Unicode (`U+1000` to `U+109F`), strictly rejecting legacy pseudo-Zawgyi encodings.
-2. **Compound Word Grouping:** Cohesive grammatical and lexical words are segmented with whitespace delimiters to ensure optimal Byte-Pair Encoding (BPE) tokenization.
-3. **Punctuation Cleanliness:** Extraneous quotation marks and non-standard symbols are removed to ensure zero acoustic mismatch.
+Word segmentation ambiguity is a significant challenge in Myanmar language processing. All corpora and models in this project adhere to unified text normalization rules:
+1. **Unicode Compliance:** Strict enforcement of standard Myanmar Unicode (`U+1000` to `U+109F`), rejecting pseudo-Zawgyi encodings.
+2. **Word Segmentation:** Lexical and grammatical units are consistently whitespace-delimited to support optimal subword tokenization (BPE).
+3. **Punctuation Filtering:** Non-standard punctuation symbols are normalized to eliminate acoustic-textual mismatches.
 
-For the complete technical specification, please refer to [WORD_SEGMENTATION_RULES.md](WORD_SEGMENTATION_RULES.md).
-
----
-
-## 🇲🇲 မြန်မာဘာသာဖြင့် အကျဉ်းချုပ်
-
-### Dataset အကြောင်း
-ဤ Repository ရှိ Dataset များနှင့် Fine-tuned Model များသည် မြန်မာဘာသာစကား သုတေသနနှင့် Voice AI Applications များ (Call Center Automation, Voice Assistant, Transcriber) ဖန်တီးရာတွင် အထောက်အကူပြုနိုင်ရန် ဖန်တီးထားခြင်း ဖြစ်ပါသည်။
-
-- **အသုံးပြုခွင့် (License):** Creative Commons Attribution 4.0 International (CC BY 4.0) လိုင်စင်ဖြင့် ထုတ်ဝေထားသောကြောင့် ပညာရေး၊ သုတေသနနှင့် Commercial Model Training များအတွက် လွတ်လပ်စွာ အခမဲ့ အသုံးပြုနိုင်ပါသည်။
-- **အသိအမှတ်ပြုခြင်း (Attribution):** မည်သည့် ပရောဂျက်တွင်မဆို ထည့်သွင်းအသုံးပြုပါက အောက်ဖော်ပြပါ Citation အတိုင်း Credit ပေးနိုင်ပါသည်။
+For detailed guidelines and technical notes, refer to [WORD_SEGMENTATION_RULES.md](WORD_SEGMENTATION_RULES.md).
 
 ---
 
-## 📖 Citation
+## Myanmar Language Summary
 
-If you use these datasets or models in your academic research or commercial products, please cite as follows:
+### ဒေတာအတွဲဆိုင်ရာ အချက်အလက်များ
+ဤ Repository ပါ Dataset များနှင့် Acoustic Model များသည် မြန်မာဘာသာစကား သုတေသနနှင့် အသံဆိုင်ရာ Artificial Intelligence လုပ်ငန်းများအတွက် ရည်ရွယ်ထုတ်ဝေထားခြင်း ဖြစ်ပါသည်။
+
+- **လိုင်စင် (License):** Creative Commons Attribution 4.0 International (CC BY 4.0) လိုင်စင်ဖြင့် ဖြန့်ချိထားပြီး သုတေသန၊ ပညာရေးနှင့် စီးပွားဖြစ် Model Training များအတွက် လွတ်လပ်စွာ အခမဲ့ အသုံးပြုနိုင်ပါသည်။
+- **အသိအမှတ်ပြုခြင်း (Attribution):** သုတေသနလုပ်ငန်းများတွင် ထည့်သွင်းအသုံးပြုပါက သင့်လျော်သော Citation/Credit ပေးရန် လိုအပ်ပါသည်။
+
+---
+
+## Citation
+
+If you use these corpora or models in your research or applications, please cite as follows:
 
 ```bibtex
 @misc{open_burmese_speech_2026,
@@ -145,8 +146,8 @@ If you use these datasets or models in your academic research or commercial prod
 
 ---
 
-## 👤 Author & Acknowledgements
+## Author & Contact
 
 * **Author:** Thant Zin Phyo
-* **Hugging Face Hub:** [@thantzinphyo](https://huggingface.co/thantzinphyo)
+* **Hugging Face:** [@thantzinphyo](https://huggingface.co/thantzinphyo)
 * **GitHub:** [@thantzinphyo-gg](https://github.com/thantzinphyo-gg)
