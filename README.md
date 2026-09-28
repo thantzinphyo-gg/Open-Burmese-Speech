@@ -3,11 +3,6 @@
 
 *Author: [Thant Zin Phyo](https://huggingface.co/thantzinphyo)*
 
-[![Hugging Face Datasets](https://img.shields.io/badge/Hugging_Face-BDDC_Dataset-yellow.svg)](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus)
-[![Hugging Face Profile](https://img.shields.io/badge/Hugging_Face-thantzinphyo-blue.svg)](https://huggingface.co/thantzinphyo)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg)](https://www.python.org/)
-
 ---
 
 ## Overview
@@ -96,7 +91,7 @@ print("Transcribed Text:", result["text"])
 
 ## Myanmar Language Summary
 
-### ဒေတာအတွဲဆိုင်ရာ အချက်အလက်များ
+### ဒေတာဆိုင်ရာ အချက်အလက်များ
 ဤ Repository ပါ Dataset များနှင့် Acoustic Model များသည် မြန်မာဘာသာစကား သုတေသနနှင့် အသံဆိုင်ရာ Artificial Intelligence လုပ်ငန်းများအတွက် ရည်ရွယ်ထုတ်ဝေထားခြင်း ဖြစ်ပါသည်။
 
 - **လိုင်စင် (License):** Creative Commons Attribution 4.0 International (CC BY 4.0) လိုင်စင်ဖြင့် ဖြန့်ချိထားပြီး သုတေသန၊ ပညာရေးနှင့် စီးပွားဖြစ် Model Training များအတွက် လွတ်လပ်စွာ အခမဲ့ အသုံးပြုနိုင်ပါသည်။
