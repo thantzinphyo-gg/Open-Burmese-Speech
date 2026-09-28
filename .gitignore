@@ -1,0 +1,39 @@
+# Large archives, datasets, and audio directories
+*.zip
+*.tar
+*.tar.gz
+*.7z
+audio/
+data/
+*.parquet
+*.csv
+
+# Model weights, tensors, and training checkpoints
+*.pt
+*.bin
+*.safetensors
+*.onnx
+*.npz
+checkpoint-*/
+runs/
+dolphin_models/
+*-finetune/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Training and internal scripts (Keep private to local workspace)
+*_finetune.py
+whisper_*.py
+upload_*.py
+inspect_audio.py
+README_*.md
+
+# OS specific files
+.DS_Store
+Thumbs.db
