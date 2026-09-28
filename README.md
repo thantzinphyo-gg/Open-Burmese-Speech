@@ -25,7 +25,7 @@ All raw audio files and large parquet shards are permanently hosted on **Hugging
 | Dataset Name | Domain / Type | Duration | Speakers | Audio Format | Hugging Face Hub Link |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Burmese Daily Dialogue Corpus (BDDC)** | Conversational / Daily Dialogue | **~22.38 Hours** (24,560 WAVs) | 13 Synthetic Speakers | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus) |
-| **Burmese Speech Refined OpenSLR-80** | Crowdsourced General Speech | **~30 Hours** (Standardized) | Multi-speaker | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/burmese-speech-refined-openslr-80) |
+| **Burmese Speech Refined OpenSLR-80** | Crowdsourced General Speech | **~2.47 Hours** (Refined Subset) | Multi-speaker | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/burmese-speech-refined-openslr-80) |
 | **Myanmar ShopVoice** | Retail & E-Commerce Conversational | Domain Specific | Multi-speaker | 16 kHz Mono PCM | [🤗 View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/myanmar-shopvoice) |
 
 ---
