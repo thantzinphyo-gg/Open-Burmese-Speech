@@ -20,7 +20,6 @@ Audio datasets are permanently hosted on the **Hugging Face Hub** with streaming
 | Dataset Name | Domain / Type | Duration | Speakers | Audio Format | Hugging Face Hub |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Burmese Daily Dialogue Corpus (BDDC)** | Conversational / Daily Dialogue | **~22.38 Hours** (24,560 WAVs) | 13 Synthetic Speakers | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/Burmese-Daily-Dialogue-Corpus) |
-| **Burmese Speech Refined OpenSLR-80** | Crowdsourced General Speech | **~2.47 Hours** (Refined Subset) | Single-speaker | 16 kHz Mono PCM | [View on Hugging Face](https://huggingface.co/datasets/thantzinphyo/burmese-speech-refined-openslr-80) |
 
 ---
 
