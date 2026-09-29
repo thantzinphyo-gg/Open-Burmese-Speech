@@ -29,6 +29,7 @@ Acoustic speech recognition models fine-tuned for Myanmar language:
 
 | Model Name | Architecture / Base Model | Hugging Face Hub Link |
 | :--- | :--- | :---: |
+| **Dolphin-Small-Burmese-ASR** | E-Branchformer + Transformer (`DataoceanAI/dolphin-small`) | [Hugging Face](https://huggingface.co/thantzinphyo/Dolphin-Small-Burmese-ASR) |
 | **Dolphin-Base-Burmese-ASR** | E-Branchformer + Transformer (`DataoceanAI/dolphin-base`) | [Hugging Face](https://huggingface.co/thantzinphyo/Dolphin-Base-Burmese-ASR) |
 | **Meta-MMS-300M-ASR** | Facebook MMS-300M (Wav2Vec2) | [Hugging Face](https://huggingface.co/thantzinphyo/Meta-MMS-300M-ASR) |
 | **Whisper-Small-ASR** | OpenAI Whisper Small (244M) | [Hugging Face](https://huggingface.co/thantzinphyo/Whisper-Small-ASR) |
