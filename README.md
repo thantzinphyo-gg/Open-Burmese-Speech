@@ -1,11 +1,11 @@
-# Open-Burmese-Speech
+### Open-Burmese-Speech
 **Open Corpora and Acoustic Models for the Myanmar Language**
 
 *Author: [Thant Zin Phyo](https://huggingface.co/thantzinphyo)*
 
 ---
 
-## Overview
+### Overview
 
 **Open-Burmese-Speech** is an open-source speech processing ecosystem designed to advance Automatic Speech Recognition (ASR), Speech Synthesis (TTS), and audio language processing for Myanmar (Burmese).
 
@@ -15,7 +15,7 @@ Audio datasets are permanently hosted on the **Hugging Face Hub** with streaming
 
 ---
 
-## Dataset Collection
+### Dataset Collection
 
 | Dataset Name | Domain / Type | Duration | Speakers | Audio Format | Hugging Face Hub |
 | :--- | :--- | :---: | :---: | :---: | :---: |
@@ -23,7 +23,7 @@ Audio datasets are permanently hosted on the **Hugging Face Hub** with streaming
 
 ---
 
-## Model Zoo
+### Model Zoo
 
 Acoustic speech recognition models fine-tuned for Myanmar language:
 
@@ -39,7 +39,7 @@ Acoustic speech recognition models fine-tuned for Myanmar language:
 
 ---
 
-## Quickstart & Usage
+### Quickstart & Usage
 
 ### 1. Installation
 
@@ -89,7 +89,7 @@ print("Transcribed Text:", result["text"])
 
 ---
 
-## Myanmar Language Summary
+### Myanmar Language Summary
 
 ### ဒေတာဆိုင်ရာ အချက်အလက်များ
 ဤ Repository ပါ Dataset များနှင့် Acoustic Model များသည် မြန်မာဘာသာစကား သုတေသနနှင့် အသံဆိုင်ရာ Artificial Intelligence လုပ်ငန်းများအတွက် ရည်ရွယ်ထုတ်ဝေထားခြင်း ဖြစ်ပါသည်။
@@ -99,7 +99,7 @@ print("Transcribed Text:", result["text"])
 
 ---
 
-## Citation
+### Citation
 
 If you use these corpora or models in your research or applications, please cite as follows:
 
@@ -124,7 +124,7 @@ If you use these corpora or models in your research or applications, please cite
 
 ---
 
-## Author & Contact
+### Author & Contact
 
 * **Author:** Thant Zin Phyo
 * **Hugging Face:** [@thantzinphyo](https://huggingface.co/thantzinphyo)
